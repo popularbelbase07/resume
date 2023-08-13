@@ -17,4 +17,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.TOKEN }}
-        publish_dir: ./index.html  # Change this to the directory containing your HTML/CSS files
+        publish_dir: ./-- index.html  # Change this to the directory containing your HTML/CSS files
