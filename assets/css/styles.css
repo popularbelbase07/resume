@@ -395,7 +395,7 @@ img{
 
 .image-container {
   display: flex; /* Use flexbox to create a horizontal layout */
-  justify-content:left; /* Distribute space evenly between images */
+  justify-content:space-evenly; /* Distribute space evenly between images */
   align-items:left; /* Center images vertically */
 }
 
