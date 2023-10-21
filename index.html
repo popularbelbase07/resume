@@ -16,16 +16,25 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo"><strong>Popular Belbase</strong></a>
+                   <!-- <a href="#" class="nav__logo"><strong>Popular Belbase</strong></a>  -->
+
+                    <div class="logo">
+                        <a href="#">
+                            <img src="assets\img\Popularalogo.jpg" alt="Logo">
+                        </a>
+                    </div>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">Education</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Education</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Experience</a></li>
+                        <li class="nav__item"><a href="#awards" class="nav__link">Certifications</a></li>
+                        <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
+                        
+                        
                        <!-- <li class="nav__item"><a href="#contact" class="nav__link">Motivation</a></li> -->
                     </ul>
                 </div>
@@ -48,23 +57,27 @@
 
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/popular-belbase/" target="_blank" class="home__social-icon">h<i class='bx bxl-linkedin' >linkedin</i></a>
+                    <a href="https://www.linkedin.com/in/popular-belbase/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin' >linkedin</i></a>
                     <a href="https://github.com/popularbelbase07" target="_blank" class="home__social-icon"><i class='bx bxl-github' >Github</i></a>
                 </div>
                 <div class = "class__text">
-                    <p class="about__text">I am Popular Belbase, a Software Development graduate from KEA- Københavns Erhvervsakademi. With
-                        experience in IT systems and proficiency in programming, I am highly motivated and adaptable. I seek a
-                        software developer role to advance my career, explore new depths and benefit the organization.
-                        My technical abilities and passion for problem-solving make me a great fit for your organization. Seeking
-                        opportunities to grow within software development, I am excited to embark on this journey and eager to
-                        take on challenges
-                    </p><br><div> 
+                    <p class="about__text"><strong>"Curiosity is the wick in the candle of learning." - William Arthur Ward.</strong><br>
+                        I am a curious and motivated recent Software Development graduate with a strong IT background and proficient coding skills. My deep enthusiasm for
+                        technology and adaptability make me an asset to your organization.
+                         <br>
+                        I excel in writing clear, maintainable code and possess a strong drive for problem-solving that aligns perfectly with your company's requirements. I have
+                        successfully collaborated with diverse teams across various projects,
+                        demonstrating adaptability in both remote and office environments. I am
+                        excited to pursue growth in software development and thrive on tackling
+                        challenges on this journey.
+                        
+                    </p><div> 
 
                 <div class="home__img">    
                     <img  id = "profilepic" src="assets/img/popularbelbase.PNG" alt="popular">
                 </div>                
             </section>
-
+        
                  <!--===== SKILLS =====-->
                  <section class="skills section" id="skills">
                     <h2 class="section-title">Professional Skills</h2>
@@ -75,10 +88,13 @@
                             <div class="skills__data">
                                 <div class="skills__names">
                                     <i class='bx bxs-paint skills__icon'></i>
-                                    <span class="skills__name">Proficiency in programming languages such as C#,Java,C++ and C.An expertise in C#, ASP.NET technology and  well acquainted with Object Oriented Programming.</div>                           
+                                    <box-icon name='child'></box-icon>
+                                    <span class="skills__name">Accomplished back-end developer with a track record of success in
+                                        ASP.NET, C# and  well acquainted with Object Oriented Programming. Proficiency in various programming languages such as C#,Java,Python,C++ and C.</div>                           
                               
                             </div>
 
+                           
                             <div class="skills__data">
                                 <div class="skills__names">
                                     <i class='bx bxs-paint skills__icon'></i>
@@ -88,10 +104,20 @@
                             <div class="skills__data">
                                 <div class="skills__names">
                                     <i class='bx bxs-paint skills__icon'></i>
-                                    <span class="skills__name">Good understanding of software architectural patterns, such as the Model-View-Controller (MVC) pattern,MVVM, which can help them design efficient and maintainable software.
+                                    <span class="skills__name">Knowledge of software development principles. Proficient in various development methodologies, including Agile, Scrum, and Waterfall, to deliver high-quality software products on time and within budget.
+                                         Skilled in implementing the Model-View-Controller (MVC) and Model-View-ViewModel (MVVM) architectural patterns to create well-structured and maintainable codebases.
                                     </div>                           
                               
                             </div>
+
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxs-paint skills__icon'></i>
+                                    <span class="skills__name"> Gather and refine specifications and requirements based on technical needs.Effective communication skills are essential for collaborating with team members, stakeholders, and documenting code.
+
+                                </div>
+                            </div>
+
     
                             <div class="skills__data">
                                 <div class="skills__names">
@@ -214,114 +240,160 @@ tr:nth-child(even) {
        
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work and Experience</h2>
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="work__container bd-grid">
+
+                     <!--Freelencer-->
+                     <div class="work__img">
+                        <a href="#" target="_blank" ><span><i>As an adept freelance developer, I excel in delivering
+                            tailored solutions across diverse projects. Proficient in
+                            .NET technology, my unwavering commitment to
+                            excellence, problem-solving prowess, and proactive
+                            work ethic consistently ensure on-time, top-tier
+                            deliverables for every client. </i>
+                            <img src="assets\img\Freelance.png" alt="Freelencer" title="Software Developer"> </a>                       
+                        </div>
+                   
+                    <!--Internship at maersk-->
+                        <div class="work__img">
+                        <a href="https://www.maersk.com/" target="_blank" ><span><b>As a cloud engineering intern, I engaged in a
+                            collaborative effort with the innovation team to create
+                            the backend system for Maersk known as Idea
+                            Repository using C# and .NET technology.
+                            Additionally, I contributed my expertise to the
+                            <Strong>MAERSK HACKATHON-2022 </Strong></b> team. Later, I
+                            transitioned to the Cloud Governance team and
+                            devoted my time to working on a framework for
+                            beacon compliance checks over a three-month period.
+                            . <br></span> <strong>A.P. Moller - Maersk.</strong></i>
+                            <img src="assets/img/maersk.jpg" alt="Maersk" title="A.P. Moller - Maersk"> </a>                       
+                        </div>
+                  
+                
+                    <!--Internship at Top Nepal-->
+                    <div class="work__img">
+                        <a href="https://topnepal.com.np/" target="_blank"> <span><i>Work as an intern in the position of Full Stack Software Developer <br></span><i></i> <strong>Top Nepal International Pvt. Ltd.</strong></i>
+                            <img src="assets/img/top_nepal.jpeg" alt="Top_Nepal" title="Top Nepal International Pvt. Ltd"></a>
+                   
+                     
+                </div>
+            </section>
+
+   <!--===== Awards and Certifications =====-->
+   <section class="awards" id="awards">
+    <h2 class="section-title">Awards & Certifications</h2>
+        <div class="work__img">
+
+            <style>
+                table {
+                  font-family: arial, sans-serif;
+                  border-collapse: collapse;
+                  width: 95%;
+                  margin: 20px  20px;
+                }
+                
+                td, th {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+                }
+                
+                tr:nth-child(even) {
+                  background-color: #dddddd;
+                }
+                
+                
+                @media only screen and (max-width: 400px ) {
+                    .table{
+                        width: 150px;
+                    }
+                      
+                    
+                  } 
+                
+                
+                </style>
+                <table className ="table">
+                  <tr>
+                    <th>Institute or Academy</th>
+                     <th>Technical Stack</th>
+                    <th>Duration</th>
+                     <th>Completed Year</th>
+                  </tr>
+                  <tr>
+                
+                    <td>Broadway Infosys</td>
+                    <td>Programming in C and C++</td>
+                     <td>Three Months</td>
+                     <th>2017</th>
+                  </tr>
+                   
+                  <tr>
+                    <td>Broadway Infosys</td>
+                    <td>Programming in Java and Spring Boot</td>
+                     <td>Six Months</td>
+                      <th>2018</th>
+                  </tr>
+                  </table>
+                  </div>
+                 
+                        </div>                                                    
+                               
+             <!--Certifications-->
+             <div class="image-container">
+                <div class="work__img">
+                    <a href="https://www.credly.com/badges/5355d51a-9c22-448b-a20e-76ff96466559/linked_in?t=rkeove" target="_blank" >
+                    <img src="assets/img/ms-az-900-certification.png" alt="Azure Fundamentals" title="Azure Fundamentals"></a>                        
+                </div> 
+                <div class="work__img">
+                    <a href="https://www.linkedin.com/learning/certificates/e9a8e83a6c60defa10b42b193018ebb7f02bdfa577921bbf8d9c035a6243b489" target="_blank" >
+                    <img src="assets\img\microsoft_Linkedin.gif" alt="Microsoft and LinkedIn" title="Microsoft logo
+                    Career Essentials in Software Development by Microsoft and LinkedIn"></a>                        
+                </div> 
+              </div>
+              </div>
+   
+</section>
+            <!--===== Relevent Projects =====-->
+            <section class="project section" id="project">
+                <h2 class="section-title">Relevent Projects</h2>
                 
                 <div class="work__container bd-grid">
                     <!--Oracle Cinema link-->
-                        <div class="work__img">
+                        <div class="project__img">
                             <a href="https://oraclecinama.web.app" target="_blank" >
-                            <img src="assets/img/oraclecinemaScreenshoot.png" alt="Movie Catalog" title="Movie Catalog"></a>                        
+                            <img src="assets\img\Oracle Cinemas.gif" alt="Movie Catalog" title="Movie Catalog"></a>                        
                         </div>   
-                    <!--Internship at maersk-->
-                        <div class="work__img">
-                        <a href="https://www.maersk.com/" target="_blank" ><span><i>Work as  an intern in the position of Cloud Engineer-Innovation for six months. <br></span> <strong>A.P. Moller - Maersk.</strong></i>
-                            <img src="assets/img/maersk.jpg" alt="Maersk" title="A.P. Moller - Maersk"> </a>                       
-                        </div>
+                  
                      <!--Order system web Application-->
-                     <div class="work__img">
+                     <div class="project__img">
                         <a href="https://order-system-777c5.web.app/" target="_blank" >
                         <img src="assets/img/Order_System.png" alt="Order System"></a>                        
                     </div>
                 
-                    <!--Internship at Top Nepal-->
-                    <div class="work__img">
-                        <a href="https://topnepal.com.np/" target="_blank"> <span><i>Work as an intern in the position of Software Developer <br></spani> <strong>Top Nepal International Pvt. Ltd.</strong></i>
-                            <img src="assets/img/top_nepal.jpeg" alt="Top_Nepal" title="Top Nepal International Pvt. Ltd"></a>
-                    </div> 
                    <!--Private web protal-->
-                     <div class="work__img">
+                     <div class="project__img">
                      <a href="https://www.popularbelbase.com/" target="_blank">
                     <img src="assets/img/poplogo.png" alt="Popular's website"></a>
                     </div>  
                     <!--Private Social Network Application-->
-                    <div class="work__img">
+                    <div class="project__img">
                      <a href="https://popcom-a79c9.web.app/" target="_blank" >
                         <img src="assets/img/popcomlogo.png" alt="PopCom Web Application"></a>                        
                     </div>
+
+                     <!--Private Social Network Application-->
+                     <div class="project__img">
+                        <a href="https://github.com/popularbelbase07" target="_blank" >
+                           <img src="assets\img\GitHub.png" alt="PopCom Web Application"></a>                        
+                       </div>
                      
                 </div>
             </section>
             
 
-    <!--===== Motivation =====-->
-    <section class="contact section" id="contact">
-        <h2 class="section-title">Awards & Certifications</h2>
-            <div class="work__img">
-
-                <style>
-                    table {
-                      font-family: arial, sans-serif;
-                      border-collapse: collapse;
-                      width: 95%;
-                      margin: 20px  20px;
-                    }
-                    
-                    td, th {
-                      border: 1px solid #dddddd;
-                      text-align: left;
-                      padding: 8px;
-                    }
-                    
-                    tr:nth-child(even) {
-                      background-color: #dddddd;
-                    }
-                    
-                    
-                    @media only screen and (max-width: 400px ) {
-                        .table{
-                            width: 150px;
-                        }
-                          
-                        
-                      } 
-                    
-                    
-                    </style>
-                    <table className ="table">
-                      <tr>
-                        <th>Institute or Academy</th>
-                         <th>Technical languages</th>
-                        <th>Duration</th>
-                         <th>Completed Year</th>
-                      </tr>
-                      <tr>
-                    
-                        <td>Broadway Infosys</td>
-                        <td>Programming in C and C++</td>
-                         <td>Three Months</td>
-                         <th>2017</th>
-                      </tr>
-                       
-                      <tr>
-                        <td>Broadway Infosys</td>
-                        <td>Programming in Java and Spring Boot</td>
-                         <td>Six Months</td>
-                          <th>2018</th>
-                      </tr>
-                      </table>
-                      </div>
-                     
-                            </div>                                                    
-                                   
-                 <!--Azure Fundamentals-->
-                 <div class="work__img">
-                    <a href="https://www.credly.com/badges/5355d51a-9c22-448b-a20e-76ff96466559/linked_in?t=rkeove" target="_blank" >
-                    <img src="assets/img/ms-az-900-certification.png" alt="Azure Fundamentals" title="Azure Fundamentals"></a>                        
-                </div> 
-
-        </div>
-       
-    </section>
+ 
 
 
 
@@ -345,7 +417,11 @@ tr:nth-child(even) {
             </section>
         </main>
         -->
+
+
         <!--===== CONTACT =====-->
+        <!--
+        
         <section class="contact_section" id="contact">
             <h2 class="section-title">Contact</h2>
 
@@ -363,12 +439,19 @@ tr:nth-child(even) {
                 </form>
             </div>
         </section>
+
+
+    -->
     </main>
 
 
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <p class="footer__title">Popular Belbase</p>
+            <div id="details">
+            <p class="footer__title">Popular Belbase</p>     
+            <h4 ><b>Contact Number : +45 30255141 </b></h4>                            
+            <h4 ><b>Email : popularbelbase92@gmail.com</b></h4>
+        </div>
             <div class="footer__social">
                 <a href="https://www.facebook.com/belbase.popular" target = "_blank" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
                 <a href="https://www.instagram.com/popularbelbase/" target = "_blank" class="footer__icon"><i class='bx bxl-instagram' ></i></a>

@@ -116,8 +116,8 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  background-color: rgb(236, 234, 234);
 }
 
 /*===== NAV =====*/
@@ -169,6 +169,21 @@ img{
   cursor: pointer;
 }
 
+/*Logo for Popular Belbase*/
+.logo{
+  
+    text-align: center; /* Center the logo horizontally */
+    padding: 20px; /* Add spacing around the logo */
+}
+
+.logo img {
+  width: 60px; /* Set the width of the logo image */
+  height: auto; /* Maintain the aspect ratio */
+}
+/*Logo for Popular Belbase completed*/
+
+
+
 /*Active menu*/
 .active::after{
   position: absolute;
@@ -187,7 +202,7 @@ img{
 
 /*===== HOME =====*/
 .home{
-  height: calc(50vh - 2rem);
+  height: calc(50vh - 1rem);
   row-gap: 1rem;
 }
 .home__data{
@@ -232,91 +247,6 @@ img{
 }
 
 
-@media only screen and (max-width: 350px ) {
-  .home__img{
-    width: 200px;
-    margin: 0px -50px 100px;
-  }
-  #profilepic{
-      position:absolute;
-      right: 20px;      
-      width: 50px;
-      height: 75px;
-      margin: -400px 50px 20px 50px;
-    
-    }
-    .about__text{
-      font-size: 10px;
-    }
-}
-
-@media screen and (min-width:350px) and (max-width:750px){
-    .home__img{
-      width: 300px;
-      height: auto;
-      margin: 0px -50px 270px;
-
-} 
-.about__text{
-  font-size: 10px;
-}
-#profilepic{
-  position:absolute;
-  right: 20px;      
-  width: 100px;
-  height: 150px;
-  margin: -320px 5px 20px 50px;
-
-}
- 
-}
-
-@media screen and (min-width:751px) and (max-width:1499px){
-  h1.home__title{
-    margin: 50px 5px 20px 50px;
-  }
-  .home__img{
-    width: 300px;
-    height: auto;
-    margin: 0px -50px 270px;
-
-} 
-.about__text{
-font-size: 15px;
-}
-#profilepic{
-position:absolute;
-right: 20px;      
-width: 160px;
-height: 180px;
-margin: -200px 5px 20px 50px;
-
-}
-
-}
-
-@media screen and (min-width:1500px) and (max-width:3000px){
-  .home__img{
-    width: 400px;
-    height: auto;
-    margin: 0px -50px 270px;
-
-} 
-.about__text{
-font-size: 20px;
-}
-#profilepic{
-position:absolute;
-right: 20px;      
-width: 250px;
-height: 350px;
-margin: -650px 5px 20px 50px;
-
-}
-
-}
-
-   
 
 
 
@@ -345,7 +275,8 @@ margin: -650px 5px 20px 50px;
   font-size: big;
   font-style: italic;
   font-weight:var(--font-semi);
-  margin: 20px 20px;
+  margin: 10px 20px;
+
 }
 .about__img{
   justify-self: center;
@@ -435,21 +366,46 @@ margin: -650px 5px 20px 50px;
   background-color: greenyellow;
   
 }
-/* ===== CONTACT =====*/
-#section{
-  row-gap: .5rem;
+
+/* ===== Relevent Projects =====*/
+.project__container{
+  row-gap: 1rem;
+}
+.project__img{
+  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.project__img img{
+  transition: 1s;
+  cursor: pointer;
+}
+.project__img img:hover{
+  transform: scale(1.1);
+}
+#intern{
+  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  background-color: greenyellow;
+  
 }
 
-.contact__input{
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
+/*=======Certifications ==========*/
+
+.image-container {
+  display: flex; /* Use flexbox to create a horizontal layout */
+  justify-content:space-evenly; /* Distribute space evenly between images */
+  align-items:left; /* Center images vertically */
 }
+
+.image-container img {
+  max-width: 250px; /* Adjust the width of each image as needed */
+  height: 250px; /* Maintain the aspect ratio */
+  padding: 20px;
+}
+
 
 
  /*
@@ -483,6 +439,25 @@ margin: -650px 5px 20px 50px;
   color: #fff;
   margin: 0 var(--mb-2)
 }
+
+/* ===== CONTACT =====*/
+#section{
+  row-gap:1rem;
+}
+
+.contact__input{
+  width: 100%;
+  font-size: var(--normal-font-size);
+  font-weight: var(--big-font-size);
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 1px solid var(--second-color);
+  outline: none;
+  margin-bottom: var(--mb-1);
+}
+
+
+
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px){
@@ -531,10 +506,12 @@ margin: -650px 5px 20px 50px;
     padding-bottom: 2.5rem;
     flex-direction: row;
     align-self: flex-end;
+    
   }
   .home__social-icon{
     margin-bottom: 0;
-    margin-right: var(--mb-4);
+    margin-right: var(--mb-1);
+   
   }
   .home__img{
     width: 400px;
@@ -551,7 +528,7 @@ margin: -650px 5px 20px 50px;
   }
   .work__container{
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
     column-gap: 2rem;
   }
   .contact__form{
@@ -570,4 +547,147 @@ margin: -650px 5px 20px 50px;
   .home__img{
     right: 10%;
   }
+
 }
+@media (max-width: 350px){
+ 
+
+   main{
+    font-size: small;
+   }
+   .nav__menu{
+    position: fixed;
+    right: -100%;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    background-color: var(--second-color);
+    transition: .5s;
+  }
+ .home__img{
+   width: 200px;
+   margin: 50px -30px 150px;
+ }
+ #profilepic{
+     position:fixed;
+     right: 20px;      
+     width: 70px;
+     height: 80px;
+     margin: -370px 30px 20px 50px;
+   
+   }
+   .about__text{
+     font-size: 10px;
+     margin-top: -20px;
+   }
+   .section{
+     margin: 60px;
+     font-size: 10px;   
+    }
+     .home__title{
+       font-size: medium;
+      }
+      #details{
+        font-size: small;
+      }
+  
+}
+
+
+@media (min-width: 350px) and (max-width: 750px) {
+
+  main{
+    font-size: small;
+   }
+  h1.home__title{
+    margin: 10px 5px 10px 1px;
+  }
+  .nav__menu{
+    position: fixed;
+    right: -100%;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    background-color: var(--second-color);
+    transition: .5s;
+  }
+
+#profilepic{
+ position:fixed;
+ right: 20px;      
+ width: 80px;
+ height: 130px;
+ margin: -520px -60px 10px 50px;
+ 
+ }
+.about__text{
+font-size: 12px;
+margin-top: -20px;
+}
+.section{
+margin: 60px;
+font-size: 15px;   
+}
+.home__title{
+font-size: 20px;
+}
+.skills__name{
+  font-size: 15px;
+}
+
+
+}
+
+@media screen and (min-width:751px) and (max-width:1499px){
+ h1.home__title{
+   margin: 120px 5px 20px 50px;
+ }
+ .home__img{
+   width: 300px;
+   height: auto;
+   margin: 0px -50px 270px;
+
+} 
+.about__text{
+font-size: 18px;
+}
+#profilepic{
+position:absolute;
+right: 20px;      
+width: 160px;
+height: 180px;
+margin: -180px 5px 20px 50px;
+
+}
+
+}
+
+@media screen and (min-width:1500px) and (max-width:3000px){
+  h1.home__title{
+    margin: 120px 5px 20px 50px;
+  }
+ .home__img{
+   width: 400px;
+   height: auto;
+   margin: 0px -50px 270px;
+
+} 
+.about__text{
+font-size: 25px;
+}
+.skills__name{
+  font-size: 25px;
+}
+#profilepic{
+position:absolute;
+right: 20px;      
+width: 250px;
+height: 350px;
+margin: -650px 5px 20px 50px;
+
+}
+
+}
+
+  
+/*  Media Screen*/
