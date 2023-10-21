@@ -554,15 +554,7 @@ img{
    main{
     font-size: small;
    }
-   .nav__menu{
-    position: fixed;
-    right: -100%;
-    width: auto;
-    height: auto;
-    padding: 1rem;
-    background-color: var(--second-color);
-    transition: .5s;
-  }
+
  .home__img{
    width: 200px;
    margin: 50px -30px 150px;
@@ -601,16 +593,6 @@ img{
   h1.home__title{
     margin: 10px 5px 10px 1px;
   }
-  .nav__menu{
-    position: fixed;
-    right: -100%;
-    width: auto;
-    height: auto;
-    padding: 1rem;
-    background-color: var(--second-color);
-    transition: .5s;
-  }
-
 #profilepic{
  position:fixed;
  right: 20px;      
