@@ -174,12 +174,11 @@ img{
   
     text-align: center; /* Center the logo horizontally */
     padding: 20px; /* Add spacing around the logo */
+    width: 60px; /* Set the width of the logo image */
+    height: auto;
 }
 
-.logo img {
-  width: 60px; /* Set the width of the logo image */
-  height: auto; /* Maintain the aspect ratio */
-}
+
 /*Logo for Popular Belbase completed*/
 
 
@@ -396,7 +395,7 @@ img{
 
 .image-container {
   display: flex; /* Use flexbox to create a horizontal layout */
-  justify-content:space-evenly; /* Distribute space evenly between images */
+  justify-content:left; /* Distribute space evenly between images */
   align-items:left; /* Center images vertically */
 }
 
