@@ -95,9 +95,8 @@ img{
   top: 2rem;
   background-color: var(--first-color);
 }
-.section{
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+.section {
+  padding: 2rem 0.5rem;
 }
 
 /*===== LAYOUT =====*/
@@ -567,8 +566,8 @@ img{
      margin: -370px 30px 20px 50px;
    
    }
-   .about__text{
-     font-size: 10px;
+   .about__text {
+     font-size: var(--normal-font-size);
      margin-top: -20px;
    }
    .section{
@@ -654,17 +653,17 @@ margin: -180px 5px 20px 50px;
 
 } 
 .about__text{
-font-size: 25px;
+font-size: 23px;
 }
 .skills__name{
-  font-size: 25px;
+  font-size: 23px;
 }
 #profilepic{
 position:absolute;
 right: 20px;      
-width: 250px;
-height: 350px;
-margin: -650px 5px 20px 50px;
+width: 280px;
+height: 300px;
+margin: -350px -50px 20px 50px;
 
 }
 
