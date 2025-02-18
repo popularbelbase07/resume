@@ -1,40 +1,33 @@
-# Main CI/CD Workflow for Deploying Static Website
-name: Main CI/CD Workflow
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]  # Trigger on push to main branch
-  pull_request:
-    branches: ["main"]  # Trigger on PRs to main branch
-  workflow_dispatch:     # Allow manual runs
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-  deployments: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - main  # Change if deploying from another branch
 
 jobs:
-  build-and-deploy:
-    name: Build & Deploy Static Website
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Updated to latest version
 
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Website Files
-        uses: actions/upload-pages-artifact@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          path: "."
+          node-version: '18'  # Adjust if needed
+
+      - name: Build Project
+        run: |
+          npm install  # Run if using a package.json
+          npm run build || echo "No build step, skipping"  # Skip if no build step exists
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Built-in GitHub token
+          publish_dir: ./  # Adjust if your built site is in a different folder
+          keep_files: true  # Prevents deleting previous files
+          force_orphan: true  # Ensures a clean commit history on `gh-pages`
+
