@@ -1,34 +1,27 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy Static Content to GitHub Pages
+# CI/CD Pipeline for Static Website Deployment to GitHub Pages
+name: CI/CD for Static Website
 
 on:
-  # Trigger on push to the main branch
   push:
-    branches: ["main"]
+    branches: ["main"]  # Runs on push to main branch
+  pull_request:
+    branches: ["main"]  # Runs on PRs to main branch
+  workflow_dispatch:     # Allows manual trigger
 
-  # Allows manual trigger from GitHub Actions tab
-  workflow_dispatch:
-
-# Set required permissions
 permissions:
-  contents: read      # Allows reading repository contents
-  pages: write        # Enables publishing to GitHub Pages
-  id-token: write     # Required for authentication with GitHub Pages
-  deployments: write  # Grants access to deployments API
+  contents: read
+  pages: write
+  id-token: write
+  deployments: write
 
-# Ensure only one deployment at a time
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    name: Deploy to GitHub Pages
+  build-and-deploy:
+    name: Build & Deploy to GitHub Pages
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout Repository
@@ -37,7 +30,7 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Build Artifacts
+      - name: Upload Static Files
         uses: actions/upload-pages-artifact@v2
         with:
           path: "."
