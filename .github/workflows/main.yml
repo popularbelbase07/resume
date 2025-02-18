@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4  # Updated to latest version
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4  # Updated to latest version
+        with:
+          path: ./dist  # Adjust the path to the directory or file you want to upload
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -27,7 +31,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Built-in GitHub token
-          publish_dir: ./  # Adjust if your built site is in a different folder
+          publish_dir: ./dist  # Adjust if your built site is in a different folder
           keep_files: true  # Prevents deleting previous files
           force_orphan: true  # Ensures a clean commit history on `gh-pages`
 
