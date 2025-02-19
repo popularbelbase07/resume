@@ -1,27 +1,63 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contactForm");
-    const formMessage = document.getElementById("formMessage");
+// Initialize EmailJS (Replace with your own credentials)
+(function() {
+    emailjs.init("YOUR_USER_ID"); // Get this from EmailJS dashboard
+})();
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+// Form submission handler
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form elements
+    const form = e.target;
+    const formMessage = document.getElementById('formMessage');
+    const button = form.querySelector('button');
+    
+    // Show loading state
+    button.disabled = true;
+    button.textContent = 'Sending...';
+    formMessage.textContent = '';
+    formMessage.classList.remove('success', 'error');
 
-        // Get form values
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
+    // Validate email format
+    const email = document.getElementById('email').value;
+    if (!validateEmail(email)) {
+        showError(formMessage, 'Please enter a valid email address', button);
+        return;
+    }
 
-        // Validate fields
-        if (name === "" || email === "" || message === "") {
-            formMessage.textContent = "Please fill out all fields.";
-            formMessage.style.color = "red";
-            return;
-        }
+    // Prepare service parameters
+    const params = {
+        from_name: document.getElementById('name').value,
+        from_email: email,
+        message: document.getElementById('message').value
+    };
 
-        // Simulate form submission (can be replaced with an actual backend request)
-        formMessage.textContent = `Thank you, ${name}! Your message has been sent.`;
-        formMessage.style.color = "green";
-
-        // Clear form
-        form.reset();
-    });
+    // Send email using EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params)
+        .then(function() {
+            formMessage.textContent = 'Message sent successfully!';
+            formMessage.classList.add('success');
+            form.reset();
+        })
+        .catch(function(error) {
+            showError(formMessage, 'Failed to send message. Please try again.', button);
+        })
+        .finally(() => {
+            button.disabled = false;
+            button.textContent = 'Send';
+        });
 });
+
+// Email validation helper
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+// Error handling helper
+function showError(element, message, button) {
+    element.textContent = message;
+    element.classList.add('error');
+    button.disabled = false;
+    button.textContent = 'Send';
+}
