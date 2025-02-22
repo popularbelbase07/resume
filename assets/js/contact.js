@@ -29,7 +29,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const params = {
         from_name: document.getElementById('name').value,
         from_email: email,
-        message: document.getElementById('message').value
+        message: document.getElementById('message').value,
+        to_email: 'popularbelbase92@gmail.com' // Add the Gmail address here
     };
 
     // Send email using EmailJS
