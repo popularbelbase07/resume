@@ -100,7 +100,7 @@ body {
 }
 
 .home__title-color {
-  color: #2ecc71;
+  color: #0c400d;
 }
 
 .home__social {
@@ -138,9 +138,21 @@ body {
 .home__image {
   max-width: 300px;
   height: auto;
-  margin: 10px 10px 10px 200px;
+  margin: 10px auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .home__image {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home__image {
+    max-width: 200px;
+  }
 }
 
 .home__text {
@@ -413,7 +425,6 @@ body {
 .work {
   padding: 4rem 0;
 }
-
 .work__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -437,8 +448,14 @@ body {
 }
 
 .work__content {
-  padding:1rem;
+  padding: 1rem;
   flex: 1;
+}
+
+.work__image {
+  width: 100%;
+  height: auto; /* Ensure images are not stretched */
+  object-fit: contain; /* Maintain aspect ratio without zooming */
 }
 
 .work__role {
@@ -637,7 +654,6 @@ body {
   color: #2d2e32;
   margin-bottom: 1rem;
 }
-
 .projects__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -653,6 +669,12 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+
+.project__img {
+  width: 100%;
+  height: auto; /* Ensure images are not stretched */
+  object-fit: contain; /* Maintain aspect ratio without zooming */
 }
 
 .project__card:hover {
